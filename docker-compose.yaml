@@ -1,6 +1,14 @@
-version: '3'
-
 services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "15672:15672" # RabbitMQ Management UI
+      - "5672:5672"   # RabbitMQ AMQP port
+    
+    networks:
+      - app-network
+      
   mongo:
     image: mongo
     container_name: mongo
@@ -57,9 +65,11 @@ services:
       - DB_PASS=docker
       - DB_HOST=postgres-db
       - DB_PORT=5432
+      - RABBITMQ_URL=amqp://rabbitmq
 
     depends_on:
       - postgres-db
+      - rabbitmq
 
     networks:
       - app-network
