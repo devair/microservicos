@@ -1,4 +1,19 @@
 services:
+  api-gateway:
+    build:
+      context: .
+      dockerfile: api-gateway/Dockerfile
+    volumes:
+      - ./api-gateway:/usr/src/app     
+    ports:
+      - '3000:3000'
+    depends_on:
+      - orders-service
+      - payments-service
+    
+    networks:
+      - app-network
+
   rabbitmq:
     image: rabbitmq:3-management
     container_name: rabbitmq
@@ -23,7 +38,7 @@ services:
     networks:
       - app-network
 
-  payments-app:
+  payments-service:
     build: 
       context: ./ms-payments-service
       dockerfile:  Dockerfile          
@@ -39,15 +54,16 @@ services:
       - DB_DATABASE=pagamentos      
       - MONGO_URI=mongodb://mongo:27017/pagamentos
       - ORDERS_URI=http://orders-app:3333/api/v1
+      - RABBITMQ_URL=amqp://rabbitmq
     
     depends_on:
       - mongo
-      - orders-app 
+      - rabbitmq 
 
     networks:
       - app-network
 
-  orders-app:
+  orders-service:
     build: 
       context: ./ms-orders-service
       dockerfile: Dockerfile          

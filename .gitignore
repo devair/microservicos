@@ -1,3 +1,6 @@
 ms-orders-service/
 ms-payments-service/
-*/
+cucumber/
+.vscode/ 
+**/node_modules/
+**/yarn.lock
