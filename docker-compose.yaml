@@ -24,9 +24,8 @@ services:
     networks:
       - app-network
       
-  mongo:
-    image: mongo
-    container_name: mongo
+  mongo-payments:
+    image: mongo    
     ports:
       - '27017:27017'
 
@@ -34,9 +33,27 @@ services:
       - MONGODB_INITDB_ROOT_USERNAME=docker
       - MONGODB_INITDB_ROOT_PASSWORD=docker
     volumes:
-      - mongo-data:/data/db  
+      - mongo-payments-data:/data/db  
     networks:
       - app-network
+    
+    depends_on:
+      - rabbitmq
+  
+  mongo-production:
+    image: mongo    
+    ports:
+      - '27018:27017'
+
+    environment:
+      - MONGODB_INITDB_ROOT_USERNAME=docker
+      - MONGODB_INITDB_ROOT_PASSWORD=docker
+    volumes:
+      - mongo-production-data:/data/db  
+    networks:
+      - app-network   
+    depends_on:
+      - rabbitmq 
 
   payments-service:
     build: 
@@ -52,12 +69,36 @@ services:
     environment:                  
       - APP_PORT=3334
       - DB_DATABASE=pagamentos      
-      - MONGO_URI=mongodb://mongo:27017/pagamentos
+      - MONGO_URI=mongodb://mongo-payments:27017/pagamentos
       - ORDERS_URI=http://orders-app:3333/api/v1
       - RABBITMQ_URL=amqp://rabbitmq
     
     depends_on:
-      - mongo
+      - mongo-payments
+      - rabbitmq 
+
+    networks:
+      - app-network
+  
+  production-service:
+    build: 
+      context: ./ms-production-service
+      dockerfile:  Dockerfile          
+    container_name: production_app    
+    ports:
+      - 3335:3335
+      - 9231:9231 #porta para debug
+    volumes:
+      - ./src:/usr/src/app/src 
+
+    environment:                  
+      - APP_PORT=3335
+      - DB_DATABASE=producao      
+      - MONGO_URI=mongodb://mongo-production:27017/producao      
+      - RABBITMQ_URL=amqp://rabbitmq
+    
+    depends_on:
+      - mongo-production
       - rabbitmq 
 
     networks:
@@ -105,13 +146,17 @@ services:
       
     networks:
       - app-network
+    depends_on:
+      - rabbitmq
 
 networks:
   app-network:
     driver: bridge
 
 volumes:
-  mongo-data:
+  mongo-payments-data:
+    driver: local
+  mongo-production-data:
     driver: local
   pgdata:
-    driver: local  
+    driver: local      
