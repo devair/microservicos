@@ -38,7 +38,9 @@ services:
       - app-network
     
     depends_on:
-      - rabbitmq
+      rabbitmq:
+        condition: service_started
+        restart: true
   
   mongo-production:
     image: mongo    
@@ -53,7 +55,9 @@ services:
     networks:
       - app-network   
     depends_on:
-      - rabbitmq 
+      rabbitmq:
+        condition: service_started
+        restart: true 
 
   payments-service:
     build: 
@@ -74,8 +78,12 @@ services:
       - RABBITMQ_URL=amqp://rabbitmq
     
     depends_on:
-      - mongo-payments
-      - rabbitmq 
+      mongo-payments:
+        condition: service_started
+        restart: true
+      rabbitmq:
+        condition: service_started
+        restart: true
 
     networks:
       - app-network
@@ -98,9 +106,12 @@ services:
       - RABBITMQ_URL=amqp://rabbitmq
     
     depends_on:
-      - mongo-production
-      - rabbitmq 
-
+      mongo-production:
+        condition: service_started
+        restart: true       
+      rabbitmq:
+        condition: service_started
+        restart: true
     networks:
       - app-network
 
@@ -125,8 +136,12 @@ services:
       - RABBITMQ_URL=amqp://rabbitmq
 
     depends_on:
-      - postgres-db
-      - rabbitmq
+      postgres-db:
+        condition: service_started
+        restart: true
+      rabbitmq:
+        condition: service_started
+        restart: true
 
     networks:
       - app-network
@@ -147,7 +162,9 @@ services:
     networks:
       - app-network
     depends_on:
-      - rabbitmq
+      rabbitmq:
+        condition: service_started
+        restart: true
 
 networks:
   app-network:
