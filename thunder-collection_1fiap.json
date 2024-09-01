@@ -1,0 +1,523 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "1fiap",
+    "collectionId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+    "dateExported": "2024-09-01T17:43:47.277Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "342331eb-035a-4017-9ca7-82ef78a1dd07",
+            "name": "FIAP - Pedidos",
+            "containerId": "",
+            "created": "2024-08-08T20:44:03.185Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "f0870b59-bd99-4383-aa66-23502b6de3ff",
+            "name": "categories",
+            "containerId": "342331eb-035a-4017-9ca7-82ef78a1dd07",
+            "created": "2024-08-08T20:44:03.186Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "5c633d3b-383f-4a71-999e-3b3f00bf9a34",
+            "name": "FIAP - Pagamentos",
+            "containerId": "",
+            "created": "2024-08-08T20:44:24.170Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "a5b26000-1a52-4dd1-9644-596e5ac299d6",
+            "name": "products",
+            "containerId": "342331eb-035a-4017-9ca7-82ef78a1dd07",
+            "created": "2024-08-08T20:44:03.187Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "183a8629-4344-4049-a94e-38d3f4e700cd",
+            "name": "FIAP - Produçao",
+            "containerId": "",
+            "created": "2024-08-14T18:41:50.124Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "6f72151c-9a9f-4edd-ae10-5451f8030197",
+            "name": "customers",
+            "containerId": "342331eb-035a-4017-9ca7-82ef78a1dd07",
+            "created": "2024-08-08T20:44:03.188Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "ebc22575-155e-490d-8990-bdeecdfad396",
+            "name": "orders",
+            "containerId": "342331eb-035a-4017-9ca7-82ef78a1dd07",
+            "created": "2024-08-08T20:44:03.189Z",
+            "sortNum": 50000
+        },
+        {
+            "_id": "6ed4e96f-a1e7-430f-a2d0-67ff5f9111b4",
+            "name": "payments",
+            "containerId": "5c633d3b-383f-4a71-999e-3b3f00bf9a34",
+            "created": "2024-08-08T20:44:24.176Z",
+            "sortNum": 60000
+        },
+        {
+            "_id": "3b8ad7b7-d22a-4bee-931d-711e1e015fde",
+            "name": "orders",
+            "containerId": "183a8629-4344-4049-a94e-38d3f4e700cd",
+            "created": "2024-08-14T18:41:50.125Z",
+            "sortNum": 60000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "ff959642-ccef-4b2e-989b-2e9ad60d8b7b",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "f0870b59-bd99-4383-aa66-23502b6de3ff",
+            "name": "create",
+            "url": "http://localhost:3333/api/v1/categories",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-08-08T20:44:03.185Z",
+            "modified": "2024-09-01T17:39:33.792Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\": \"Suco \",\n    \"description\": \"Suco\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "b67f8300-b612-42b3-83f9-4fadb4aaa53e",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "f0870b59-bd99-4383-aa66-23502b6de3ff",
+            "name": "update",
+            "url": "localhost:3333/api/v1/categories/1",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-08-08T20:44:03.187Z",
+            "modified": "2024-08-08T20:49:16.325Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\": \"Suco\",\n    \"description\": \"Sucos Diversos\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "484dc976-1a85-492f-971e-5cff6a910e60",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "f0870b59-bd99-4383-aa66-23502b6de3ff",
+            "name": "list",
+            "url": "localhost:3333/api/v1/categories",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-08-08T20:44:03.188Z",
+            "modified": "2024-08-08T20:49:33.439Z",
+            "headers": []
+        },
+        {
+            "_id": "18f655a5-388a-45ab-9eb3-15efd9082859",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "f0870b59-bd99-4383-aa66-23502b6de3ff",
+            "name": "find by id",
+            "url": "localhost:3333/api/v1/categories/1",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-08-08T20:44:03.189Z",
+            "modified": "2024-08-08T20:49:44.721Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"nome\": \"Xis Linguiça\",\n    \"preco\": 35,\n    \"descricao\": \"2 Hamburgers, alface, queijo, molho especial, pickles, pão com gergelim \"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "cd9f53c2-7b6f-428d-92c0-31d4f90769d6",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "f0870b59-bd99-4383-aa66-23502b6de3ff",
+            "name": "search",
+            "url": "localhost:3333/api/v1/categories/search?name=suc",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-08-08T20:44:03.190Z",
+            "modified": "2024-08-08T20:49:57.366Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "name",
+                    "value": "suc",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "e5a781e0-6ff8-4ff5-aa27-bdda93a75314",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "a5b26000-1a52-4dd1-9644-596e5ac299d6",
+            "name": "create",
+            "url": "http://localhost:3333/api/v1/products",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-08-08T20:44:03.191Z",
+            "modified": "2024-09-01T17:39:45.951Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\": \"Suco de maracuja\",\n    \"code\": \"BEB-3\",\n    \"categoryId\": 1,\n    \"image\": \"img\",\n    \"price\": 8,\n    \"description\": \"Suco de maracuja natural\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "4b276d93-9b8f-405b-98e0-59c75fea7e75",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "a5b26000-1a52-4dd1-9644-596e5ac299d6",
+            "name": "delete",
+            "url": "localhost:3333/api/v1/products/1",
+            "method": "DELETE",
+            "sortNum": 70000,
+            "created": "2024-08-08T20:44:03.192Z",
+            "modified": "2024-08-21T18:23:50.474Z",
+            "headers": []
+        },
+        {
+            "_id": "1d6a345d-d061-4124-832d-68c2512d929b",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "a5b26000-1a52-4dd1-9644-596e5ac299d6",
+            "name": "update",
+            "url": "localhost:3333/api/v1/products/1",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2024-08-08T20:44:03.193Z",
+            "modified": "2024-08-21T18:23:51.169Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\": \"Suco de laranja\",        \n    \"description\": \"Suco de laranja natural\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "6be64e5a-ceac-4796-accd-4e98f8a180f1",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "a5b26000-1a52-4dd1-9644-596e5ac299d6",
+            "name": "search",
+            "url": "localhost:3333/api/v1/products/search?name=Suc",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2024-08-08T20:44:03.194Z",
+            "modified": "2024-08-21T18:22:55.149Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "name",
+                    "value": "Suc",
+                    "isPath": false
+                },
+                {
+                    "name": "categoryName",
+                    "value": "suc",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "code",
+                    "value": "BEB-3",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "1b956780-d598-44ca-b142-5aa01ad486be",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "a5b26000-1a52-4dd1-9644-596e5ac299d6",
+            "name": "list",
+            "url": "localhost:3333/api/v1/products",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2024-08-08T20:44:03.195Z",
+            "modified": "2024-08-21T18:23:21.206Z",
+            "headers": []
+        },
+        {
+            "_id": "94a6a3ea-be56-499c-a304-98ae00aa1692",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "3b8ad7b7-d22a-4bee-931d-711e1e015fde",
+            "name": "update",
+            "url": "http://localhost:3335/api/v1/production-orders/update/66d4a79659786a0323a66d7a",
+            "method": "PATCH",
+            "sortNum": 105000,
+            "created": "2024-08-14T18:41:50.124Z",
+            "modified": "2024-09-01T17:43:30.067Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n   \"status\": \"Pronto\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "8c3c0c24-c04b-4a6b-9c78-c7f8d08644e0",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "a5b26000-1a52-4dd1-9644-596e5ac299d6",
+            "name": "find by id",
+            "url": "localhost:3333/api/v1/products/1",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2024-08-08T20:44:03.196Z",
+            "modified": "2024-08-21T18:23:33.760Z",
+            "headers": []
+        },
+        {
+            "_id": "f4cea48d-3ed5-4675-a715-9f6c2df38cdd",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "6f72151c-9a9f-4edd-ae10-5451f8030197",
+            "name": "create",
+            "url": "localhost:3333/api/v1/customers",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2024-08-08T20:44:03.197Z",
+            "modified": "2024-08-09T23:34:59.173Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"name\": \"Cliente 1\",\n    \"email\": \"zsez23inho1@silva.com\",\n    \"phone\": \"9999999999\",\n    \"cpf\": \"12345678911\",\n    \"acceptCampaing\": \"true\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "c8097edd-f03d-48df-8193-26e1276ddc51",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "6f72151c-9a9f-4edd-ae10-5451f8030197",
+            "name": "list",
+            "url": "localhost:3333/api/v1/customers",
+            "method": "GET",
+            "sortNum": 130000,
+            "created": "2024-08-08T20:44:03.198Z",
+            "modified": "2024-08-08T20:44:03.198Z",
+            "headers": []
+        },
+        {
+            "_id": "9a2e9adf-f58b-44c2-9b07-2d6ff3c29c24",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "6f72151c-9a9f-4edd-ae10-5451f8030197",
+            "name": "find by id",
+            "url": "localhost:3333/api/v1/customers/1",
+            "method": "GET",
+            "sortNum": 140000,
+            "created": "2024-08-08T20:44:03.199Z",
+            "modified": "2024-08-08T20:44:03.199Z",
+            "headers": []
+        },
+        {
+            "_id": "7e8cccb2-576b-4498-9f97-437cb5dd576e",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "6f72151c-9a9f-4edd-ae10-5451f8030197",
+            "name": "search",
+            "url": "localhost:3333/api/v1/customers/search?cpf=55555555555",
+            "method": "GET",
+            "sortNum": 150000,
+            "created": "2024-08-08T20:44:03.200Z",
+            "modified": "2024-08-08T20:44:03.200Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "cpf",
+                    "value": "55555555555"
+                },
+                {
+                    "name": "name",
+                    "value": "John",
+                    "isDisabled": true
+                }
+            ]
+        },
+        {
+            "_id": "92e4d3f1-424a-4218-bc9d-f33a850518ca",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "ebc22575-155e-490d-8990-bdeecdfad396",
+            "name": "create",
+            "url": "http://localhost:3333/api/v1/orders",
+            "method": "POST",
+            "sortNum": 160000,
+            "created": "2024-08-08T20:44:03.201Z",
+            "modified": "2024-09-01T17:40:15.878Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \n    \"orderItems\": [\n        {\n            \"product\": {\n                \"code\": \"BEB-3\"\n            },\n            \"quantity\": 2,\n            \"unitPrice\": 10\n        }\n    ]\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "0572b2c4-ca3d-45e9-8897-3e8e48304684",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "ebc22575-155e-490d-8990-bdeecdfad396",
+            "name": "list",
+            "url": "http://localhost:3333/api/v1/orders",
+            "method": "GET",
+            "sortNum": 170000,
+            "created": "2024-08-08T20:44:03.202Z",
+            "modified": "2024-08-31T01:47:03.651Z",
+            "headers": []
+        },
+        {
+            "_id": "e480d8ff-7e7a-4567-b462-97a681ad8ca6",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "ebc22575-155e-490d-8990-bdeecdfad396",
+            "name": "find by id",
+            "url": "localhost:3333/api/v1/orders/13",
+            "method": "GET",
+            "sortNum": 180000,
+            "created": "2024-08-08T20:44:03.203Z",
+            "modified": "2024-08-14T19:23:34.287Z",
+            "headers": []
+        },
+        {
+            "_id": "21273b28-0056-4c41-b637-5b1a090d97f7",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "ebc22575-155e-490d-8990-bdeecdfad396",
+            "name": "update status",
+            "url": "localhost:3333/api/v1/orders/2/status",
+            "method": "PATCH",
+            "sortNum": 190000,
+            "created": "2024-08-08T20:44:03.204Z",
+            "modified": "2024-08-21T21:20:29.433Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"status\": \"Pronto AND 1=1 -- \"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "548fa8c6-7aa0-4139-a74f-c6d698d40b2d",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "6ed4e96f-a1e7-430f-a2d0-67ff5f9111b4",
+            "name": "approve",
+            "url": "http://localhost:3334/api/v1/payments/approve/66d4a6ffa64f86080eb231e5",
+            "method": "PATCH",
+            "sortNum": 200000,
+            "created": "2024-08-08T20:44:24.190Z",
+            "modified": "2024-09-01T17:42:46.847Z",
+            "headers": []
+        },
+        {
+            "_id": "6bfed7fd-e191-43b9-92c6-d144fa791c79",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "6ed4e96f-a1e7-430f-a2d0-67ff5f9111b4",
+            "name": "list",
+            "url": "http://localhost:3334/api/v1/payments",
+            "method": "GET",
+            "sortNum": 210000,
+            "created": "2024-08-08T20:44:24.191Z",
+            "modified": "2024-09-01T17:40:35.085Z",
+            "headers": []
+        },
+        {
+            "_id": "788b46f8-4f44-4222-8846-cfb6585b113f",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "3b8ad7b7-d22a-4bee-931d-711e1e015fde",
+            "name": "list",
+            "url": "http://localhost:3335/api/v1/production-orders",
+            "method": "GET",
+            "sortNum": 210000,
+            "created": "2024-08-14T18:41:50.125Z",
+            "modified": "2024-09-01T17:43:08.951Z",
+            "headers": []
+        },
+        {
+            "_id": "e87e27d6-5847-46e7-b543-9f2d0c05408d",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "6ed4e96f-a1e7-430f-a2d0-67ff5f9111b4",
+            "name": "reject",
+            "url": "http://localhost:3334/api/v1/payments/reject/66d275787d2f7ee824c14de6",
+            "method": "PATCH",
+            "sortNum": 210000,
+            "created": "2024-08-20T14:15:58.623Z",
+            "modified": "2024-08-31T01:46:40.647Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n   \"reason\": \"no reason\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "6b7db8d2-9334-4281-96de-4f7db0099d22",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "6ed4e96f-a1e7-430f-a2d0-67ff5f9111b4",
+            "name": "find by id",
+            "url": "localhost:3334/api/v1/payments/66c37b1da0bc28dd9a2ee018",
+            "method": "GET",
+            "sortNum": 220000,
+            "created": "2024-08-08T20:44:24.192Z",
+            "modified": "2024-08-19T17:06:31.034Z",
+            "headers": []
+        },
+        {
+            "_id": "ee3806cd-31eb-4f96-b265-4fa79a276a23",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "6ed4e96f-a1e7-430f-a2d0-67ff5f9111b4",
+            "name": "find by order id",
+            "url": "localhost:3334/api/v1/payments/order/1",
+            "method": "GET",
+            "sortNum": 230000,
+            "created": "2024-08-08T20:44:24.193Z",
+            "modified": "2024-08-08T20:48:38.998Z",
+            "headers": []
+        },
+        {
+            "_id": "4ab0a055-1f1c-4c60-ae4c-6d3fb30e3b25",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "3b8ad7b7-d22a-4bee-931d-711e1e015fde",
+            "name": "find by order id",
+            "url": "localhost:3335/api/v1/production-orders/1",
+            "method": "GET",
+            "sortNum": 230000,
+            "created": "2024-08-14T18:41:50.127Z",
+            "modified": "2024-08-19T20:30:01.367Z",
+            "headers": []
+        },
+        {
+            "_id": "45be25f3-8f99-4e5b-8dff-2a24d9804fb0",
+            "colId": "8e1bbc97-d404-4ab8-aa51-58a2037faf37",
+            "containerId": "6f72151c-9a9f-4edd-ae10-5451f8030197",
+            "name": "delete",
+            "url": "localhost:3333/api/v1/customers/delete",
+            "method": "POST",
+            "sortNum": 240000,
+            "created": "2024-08-14T22:54:00.829Z",
+            "modified": "2024-08-19T16:38:01.505Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Zezinho\",\n  \"address\": \"Rua das Couves, 123 - Itajuba - BV - SC\",\n  \"phone\": \"111111111\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "settings": {
+        "preReq": {
+            "inlineScripts": [
+                {
+                    "script": [
+                        ""
+                    ]
+                }
+            ]
+        },
+        "postReq": {
+            "inlineScripts": [
+                {
+                    "script": [
+                        ""
+                    ]
+                }
+            ]
+        }
+    },
+    "ref": "8CKf_IXzSUL1ApFa_RBjnsu2QRhsIKbHG07o0jaN8BfRyogQsxdR2sk78ujoJIKce9z8fSQTZPCPxzA76FqHgg"
+}

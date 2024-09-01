@@ -65,10 +65,10 @@ Execute o comando abaixo:
 docker compose up -d --build
 ```
 
-b) Endpoints: 
+b) Endpoints utilizando Api-Gateway local: 
 
 * Api-Gateway: http://localhost:3000
-* Ms-Orders-Service: http://localhost:3000/orders-service
-* Ms-Payments-Service: http://localhost:3000/payments-service
-* Ms-Production-Service: http://localhost:3000/production-service
+* Ms-Orders-Service: http://localhost:3000/orders-service/api/v1
+* Ms-Payments-Service: http://localhost:3000/payments-service/api/v1
+* Ms-Production-Service: http://localhost:3000/production-service/api/v1
 
