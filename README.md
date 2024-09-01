@@ -41,6 +41,18 @@ A estrutura final de pastas deve ficar
 |    |—— src    
 |    |—— Dockerfile
 |    |—— ... (other files)
+|—— ms-orders-service
+|    |—— src    
+|    |—— Dockerfile
+|    |—— ... (other files)
+|—— ms-payments-service
+|    |—— src    
+|    |—— Dockerfile
+|    |—— ... (other files)
+|—— ms-production-service
+|    |—— src    
+|    |—— Dockerfile
+|    |—— ... (other files)
 ```
 
 
