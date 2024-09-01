@@ -29,7 +29,7 @@ https://github.com/devair/ms-orders-service.git
 * ms-production-service: https://github.com/devair/ms-production-service.git
 
 
-### d) Hierarquia de diretórios
+### d) Hierarquia de diretórios total
 
 A estrutura final de pastas deve ficar
 
