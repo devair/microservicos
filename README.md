@@ -53,10 +53,6 @@ A estrutura final de pastas deve ficar
 |—— .gitignore
 |—— docker-compose.yaml
 |—— README.md
-|—— api-gateway
-|    |—— src    
-|    |—— Dockerfile
-|    |—— ... (other files)
 |—— ms-orders-service
 |    |—— src    
 |    |—— Dockerfile
