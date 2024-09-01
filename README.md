@@ -1,11 +1,27 @@
 Sistema de Pedidos
 ===
 
-Projeto conceitual de um sistema de gestão de pedidos de uma lanchonete utilizando arquitetura limpa e micro serviços
+Projeto conceitual de um sistema de gestão de pedidos de uma lanchonete utilizando arquitetura limpa e micro serviços no padrão SAGA Coreografado
 
 
+## 2) Justificativa do Padrão de Micro Serviço
 
-## 3) Download do projeto
+A adoção do padrão SAGA Coreografrado para este projeto justifica-se pelo fato da aplicação estar distribuidas em 3 micro serviços distintos que necessitam de consistência nas transações o que torna mais simples a implementação devido ao fato de que cada serviço pode responder a eventos e tomar decisões de forma autonoma, em comparação com o padrão SAGA Orquestrado, onde a coordenação dos micros serviços é centralizada e que pode tornar-se excessivamente complexa.
+
+
+## 3) Arquitetura
+
+### a) Micro Serviços
+O projeto segue com a seguinte arquitetura de micro serviços
+
+<img src="./static/images/fase 5 - arquitetura de micro servico.jpg">
+
+
+### b) Software
+
+![Arquitetura de Software](<static/images/Application Clean Architecture.png>)
+
+## 4) Download do projeto
 
 ### a) Clonar projeto principal
 
@@ -56,19 +72,18 @@ A estrutura final de pastas deve ficar
 ```
 
 
-## 4) Rodar aplicação
+## 5) Rodar aplicação
 
 a) Para rodar a aplicação no Docker for Windows, tenha o Daemon do docker instalado e em executação. 
 
-Execute o comando abaixo:
+Execute o comando abaixo na raiz do projeto:
 ```
 docker compose up -d --build
 ```
 
 b) Endpoints utilizando Api-Gateway local: 
 
-* Api-Gateway: http://localhost:3000
-* Ms-Orders-Service: http://localhost:3000/orders-service/api/v1
-* Ms-Payments-Service: http://localhost:3000/payments-service/api/v1
-* Ms-Production-Service: http://localhost:3000/production-service/api/v1
+* Ms-Orders-Service: http://localhost:3333/api/v1
+* Ms-Payments-Service: http://localhost:3334/api/v1
+* Ms-Production-Service: http://localhost:3335/api/v1
 
