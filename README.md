@@ -12,7 +12,7 @@ A adoção do padrão SAGA Coreografrado para este projeto justifica-se pelo fat
 ## 3) Arquitetura
 
 ### a) Micro Serviços
-O projeto segue com a seguinte arquitetura de micro serviços
+O projeto segue com a seguinte arquitetura de micro serviços.
 
 <img src="./static/images/fase 5 - arquitetura de micro servico.jpg">
 
@@ -21,7 +21,12 @@ O projeto segue com a seguinte arquitetura de micro serviços
 
 ![Arquitetura de Software](<static/images/Application Clean Architecture.png>)
 
-## 4) Download do projeto
+
+## 4) Relatórios de Impactos Pessoais - RIPD
+
+[RIPD](./static/RIPD.pdf)
+
+## 5) Download do projeto
 
 ### a) Clonar projeto principal
 
@@ -68,7 +73,7 @@ A estrutura final de pastas deve ficar
 ```
 
 
-## 5) Rodar aplicação
+## 6) Rodar aplicação
 
 a) Para rodar a aplicação no Docker for Windows, tenha o Daemon do docker instalado e em executação. 
 
@@ -83,3 +88,6 @@ b) Endpoints utilizando Api-Gateway local:
 * Ms-Payments-Service: http://localhost:3334/api/v1
 * Ms-Production-Service: http://localhost:3335/api/v1
 
+c) Collection do Postman
+
+* [Postman](static/postman/thunder-collection_1fiap.json)
